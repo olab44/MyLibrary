@@ -1,9 +1,17 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QMessageBox
+from database import Database
 
 
 class LoginGUI(QWidget):
     def __init__(self):
         super().__init__()
+
+        self.database = Database()
+
+        if self.database.test_connection():
+            print("Connection to the database is successful.")
+        else:
+            print("Error: Unable to connect to the database.")
 
         self.setWindowTitle("Login")
         self.setGeometry(300, 300, 300, 150)
