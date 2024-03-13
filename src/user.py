@@ -8,5 +8,5 @@ class User:
     def add_books(self, book, shelf=None):
         self.books.append(book)
 
-    def review_book(self, book):
-        pass
+    def review_book(self, book, rate):
+        book.update_rating(rate)
