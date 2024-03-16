@@ -39,3 +39,9 @@ class Database:
     def test_connection(self):
         query = "SELECT VERSION()"
         return self.fetch_data(query)
+
+
+# data = Database()
+# query = "select * from users;"
+# query2 = "select * from books;"
+# print(data.fetch_data(query2))

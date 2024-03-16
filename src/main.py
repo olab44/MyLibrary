@@ -1,12 +1,11 @@
 from PyQt5.QtWidgets import QApplication
-from loginGUI import LoginGUI, LoginModel, LoginController
+# from gui.loginGUI import LoginGUI
+from gui.App import MainWindow
 
 
 def main():
     app = QApplication([])
-    window = LoginGUI()
-    # model = LoginModel()
-    controller = LoginController(window)
+    window = MainWindow()
     window.show()
     app.exec_()
 
